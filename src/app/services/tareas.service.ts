@@ -8,7 +8,7 @@ export class TareasService {
   //creamos un variable para el local storage`
   private localStorageKey = 'listaTareas';
 
-  getTareas(){
+  getTareas():string[]{
     //en el caso que en el localStorage exista algo lo trae y si no crea un array vacio
     return JSON.parse(localStorage.getItem(this.localStorageKey) as string) || [];
   }
